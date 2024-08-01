@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    box-shadow: 1px 5px 10px 8px gray;
+    border-radius: 10px;
+    width: 400px;
+    height: 2500px;
+    padding: 10px;
+    gap: 1rem;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+
+.tmb-calc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    height: 25px;
+    margin: 0px 5px 10px 5px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    background-color: #ffffff;
+}
+
+
+#tmb-btn{
+    width: 190px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px 0px rgb(0, 0, 0);
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#atv, #gender{
+    border-radius: 8px;
+    height: 25px;
+    width: 225px;
+}
+
+.resultados{
+    display: flex;
+    gap: 1rem;
+}
+
+#tmbres, #ndcres, #imcres{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s all;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 0px rgb(0, 0, 0);
+
+    
+}
+#sc1{
+    gap: 0.5rem;
+    padding: 0;
+}
+
+
+#sc2, #sc1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.tmb-explain, .ndc-explain, .imc-explain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: -2rem;
+}
+
+p{
+    max-width: 300px;
+}
+
+.sec-title{
+    margin-top: 60px;
+    background-color: rgb(34, 34, 34);
+    box-shadow: 0px 0px 0px 14px rgb(34, 34, 34);
+    color: white;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#sec-main{
+    width: 100%;
+    margin-top: -60px;
+}
+
+.h3-title{
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.NDC-calcs{
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+    border-bottom: 1px solid grey;
+}
+
+
+table, th, td{
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid grey;
+}
+th{
+    background-color: gainsboro;
+}
+
+
+
+
+/* @keyframes waiting{
+
+    50%{
+        background-color: rgb(0, 0, 0);
+        color: white;
+
+    }
+
+    100%{
+        background-color: white;
+    }
+
+} */

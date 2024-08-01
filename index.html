@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMBxNDC Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section id="sc2">
+            <main id="sec-main">
+            <h2 class="sec-title">TMB x NDC x IMC</h2>
+
+                <div class="tmb-explain">
+                    <h3 class="h3-title">TMB</h3>
+                    <p>A <strong>Taxa metabólica basal</strong> refere-se à quantidade de energia que o corpo humano precisa para realizar funções básicas em repouso, como respiração, circulação sanguínea, manutenção da temperatura corporal e funcionamento dos órgãos vitais.</p>
+                    <p><strong>Fórmula para homens :</strong> 
+                        TMB = (88.362 + (13.397 x peso) + (4.799 x altura) - (5.677 x idade))</p>
+                    <p><strong>Fórmula para Mulheres :</strong> 
+                        TMB = (655 + (9.6 x peso) + (1.8 x altura) - (4.7 x idade) )</p>
+                </div>
+                <div class="ndc-explain">
+                    <h3 class="h3-title">NDC</h3>
+                    <p>o NDC refere-se à <strong>Necessidade diária de calorias</strong> que uma pessoa precisa consumir para manter seu peso atual, levando em consideração seu nível de atividade física e outros fatores.</p>
+                    <div class="NDC-calcs">
+                        <p><strong>pouco ou nenhum exercício
+                            <br>(TMB x 1.2)
+                        </strong></p>
+                        
+                        <p><strong>exercício leve 1-3 dias por semana
+                            <br>(TMB x 1.375)</strong>
+                        </p>
+                        
+                        <p><strong>exercício moderado 3-5 dias por semana
+                            <br>(TMB x 1.55)
+                        </strong></p>
+                        
+                        <p><strong>exercício intenso 6-7 dias por semana
+                            <br>(TMB x 1.725)
+                        </strong></p>
+                        
+                        <p><strong>exercício muito intenso e trabalho físico
+                            <br>(TMB x 1.9)
+                        </strong></p>
+                        
+                    </div>
+                    <div class="imc-explain">
+                        <h3 class="h3-title">IMC</h3>
+                        <p>O <strong>Índice de Massa Corporal (IMC)</strong> é uma medida usada para determinar se uma pessoa está dentro de uma faixa de peso saudável com base na sua altura e peso.</p>
+                        <p><strong>O cálculo do IMC é feito usando a fórmula:</strong> 
+                            IMC = peso(kg) / altura(m)^2</strong> 
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <section id="sc1">
+        <div class="tmb-calc">
+        <header>
+            <h1 class="title">Calculadora
+                
+            </h1>
+        </header>
+        <div class="inputs">
+            <label for="">Peso: </label>
+            <input type="text" id="peso">
+
+            <label for="altura">Altura (em cm): </label>
+            <input type="text" id="altura">
+
+            <label for="">Idade: </label>
+            <input type="text" id="idade">
+            <label for="atv">Seu nível de atividade física:</label>
+            <select name="atv" id="atv">
+                <option value="1.2">pouco ou nenhum exercício</option>
+                <option value="1.375">exercício leve 1-3 dias por semana</option>
+                <option value="1.55">exercício moderado 3-5 dias por semana</option>
+                <option value="1.725">exercício intenso 6-7 dias por semana</option>
+                <option value="1.9">exercício muito intenso e trabalho físico</option>
+            </select>
+            <label for="gender">Genêro:</label>
+            <select name="gender" id="gender">
+                <option value="M">Homem</option>
+                <option value="F">Mulher</option>
+            </select>
+        </div>
+        <button id="tmb-btn" onclick="calcTMB()" onclick="calcNDC()">Calcular</button>
+        <div class="resultados">
+            <div id="tmbres">
+                <h4>TMB</h4>
+            </div>
+            <div id="ndcres">
+                <h4>NDC</h4>
+            </div>
+            <div id="imcres">
+                <h4>imc</h4>
+            </div>
+        </div>
+    </div>
+    <div class="tmb-table">
+        <header>
+            <h1 class="title">Tabela IMC</h1>
+        </header>
+        <table>
+        <tr>
+            <th>IMC</th>
+            <th>Classificação</th>
+        </tr>
+        <tr>
+            <td>Menor que 18,5</td>
+            <td id="abaixo">Abaixo do peso normal</td>
+        </tr>
+        <tr>
+            <td>18,5 - 24,9</td>
+            <td id="normal">Peso normal</td>
+        </tr>
+        <tr>
+            <td>25,0 - 29,9</td>
+            <td id="excesso">Excesso de peso</td>
+        </tr>
+        <tr>
+            <td>30,0 - 34,9</td>
+            <td id="grau1">Obesidade grau I</td>
+        </tr>
+        <tr>
+            <td>35,0 - 39,9</td>
+            <td id="grau2">Obesidade grau II</td>
+        </tr>
+        <tr>
+            <td>Maior ou igual a 40,0</td>
+            <td id="grau3">Obesidade grau III</td>
+        </tr>
+        </table>
+    </div>
+    </section>
+      
+    </div>
+   
+    
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
